@@ -17,4 +17,35 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Deportes()
+    {
+        ViewBag.Deportes = "";
+        return View();
+    }
+    public IActionResult Paises()
+    {
+        ViewBag.Paises = null; 
+        return View();
+    }
+     public IActionResult VerDetalleDeporte(int idDeportista)
+    {
+        ViewBag.DatosDeporte = "datos";
+        ViewBag.DatosDeportista = "datos";
+        return View("DetalleDeporte");
+    }
+    public IActionResult VerDetallePais(int idPais)
+    {
+        ViewBag.DetallePais = null;
+        ViewBag.ListaDeportistas = null;
+        return View("DetallePais");
+    }
+    public IActionResult Creditos()
+    {
+        return View();
+    }
+    public IActionResult VerDetalleDeportista(int idDeportista)
+    {
+        ViewBag.Datos = "datos";
+        return View("DetalleDeportista");
+    }
 }
