@@ -3,6 +3,11 @@ using Dapper;
 
 public class BD
 {
+    private static List<Pais> _listaPaises;
+    private static List<Deporte> _listaDeportes;
+    private static List<Deportista> _listaDeportistaxDeporte;
+    private static List<Deportista> _listaDeportistaxPais;
+
     private static string _connectionString = @"Server=localhost5088; DataBase=basededatosJJOO;Trusted_Connection=True;";
     public static void AgregarDeportista(Deportista dep)
     {
@@ -58,18 +63,29 @@ public class BD
 
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            return db.Query<Pais>(query).AsList();
+            _listaPaises = db.Query<Pais>(query).AsList();
         }
+        return _listaPaises;
     }
+    public static List<Deporte> ListarDeportes()
+    {
+        string query = "SELECT * FROM Deportes";
 
+        using (SqlConnection db = new SqlConnection(_connectionString))
+        {
+            _listaDeportes = db.Query<Deporte>(query).AsList();
+        }
+        return _listaDeportes;
+    }
     public static List<Deportista> ListarDeportistasPorDeporte(int idDeporte)
     {
         string query = "SELECT * FROM Deportistas WHERE IdDeporte = @IdDeporte";
 
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            return db.Query<Deportista>(query, new { IdDeporte = idDeporte }).AsList();
+            _listaDeportistaxDeporte = db.Query<Deportista>(query, new { IdDeporte = idDeporte }).AsList();
         }
+        return _listaDeportistaxDeporte;
     }
 
     public static List<Deportista> ListarDeportistasPorPais(int idPais)
@@ -78,7 +94,8 @@ public class BD
 
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
-            return db.Query<Deportista>(query, new { IdPais = idPais }).AsList();
+            _listaDeportistaxPais = db.Query<Deportista>(query, new { IdPais = idPais }).AsList();
         }
+        return _listaDeportistaxPais;
     }
 }

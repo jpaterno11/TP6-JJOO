@@ -19,24 +19,24 @@ public class HomeController : Controller
     }
     public IActionResult Deportes()
     {
-        ViewBag.Deportes = "";
+        ViewBag.Deportes = BD.ListarDeportes();
         return View();
     }
     public IActionResult Paises()
     {
-        ViewBag.Paises = null; 
+        ViewBag.Paises = BD.ListarPaises(); 
         return View();
     }
      public IActionResult VerDetalleDeporte(int idDeportista)
     {
-        ViewBag.DatosDeporte = "datos";
-        ViewBag.DatosDeportista = "datos";
+        ViewBag.DatosDeporte = BD.VerInfoDeporte(idDeportista);
+        ViewBag.DatosDeportista = BD.ListarDeportistasPorDeporte(idDeportista);
         return View("DetalleDeporte");
     }
     public IActionResult VerDetallePais(int idPais)
     {
-        ViewBag.DetallePais = null;
-        ViewBag.ListaDeportistas = null;
+        ViewBag.DetallePais = BD.VerInfoPais(idPais);
+        ViewBag.ListaDeportistas = BD.ListarDeportistasPorPais(idPais);
         return View("DetallePais");
     }
     public IActionResult Creditos()
@@ -45,7 +45,7 @@ public class HomeController : Controller
     }
     public IActionResult VerDetalleDeportista(int idDeportista)
     {
-        ViewBag.Datos = "datos";
+        ViewBag.Datos = BD.VerInfoDeportista(idDeportista);
         return View("DetalleDeportista");
     }
 }

@@ -18,8 +18,32 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\48313644\Desktop\Nueva carpeta\TP6-JJOO
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/AgregarDeportista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZ3JlZ2FyRGVwb3J0aXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/Deportes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXBvcnRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/Paises.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQYWlzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/VerDetalleDeporte.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJEZXRhbGxlRGVwb3J0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/VerDetalleDeportista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJEZXRhbGxlRGVwb3J0aXN0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Home/VerDetallePais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWZXJEZXRhbGxlUGFpcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/48313644/Desktop/Nueva carpeta/TP6-JJOO/Views/Shared/_Layout.cshtml]
