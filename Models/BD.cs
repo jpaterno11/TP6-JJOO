@@ -59,7 +59,7 @@ public class BD
 
     public static List<Pais> ListarPaises()
     {
-        string query = "SELECT * FROM Paises";
+        string query = "SELECT Nombre FROM Paises";
 
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
@@ -69,7 +69,7 @@ public class BD
     }
     public static List<Deporte> ListarDeportes()
     {
-        string query = "SELECT * FROM Deportes";
+        string query = "SELECT Nombre FROM Deportes";
 
         using (SqlConnection db = new SqlConnection(_connectionString))
         {
