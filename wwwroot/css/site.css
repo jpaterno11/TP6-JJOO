@@ -1,23 +1,96 @@
-html {
-  font-size: 14px;
-  min-height: 100%;
+body, h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 10px;
-  padding: 10px;
+  background-color: #F2E9E4;
 }
 
+.navbar {
+  background: linear-gradient(90deg, #5B7AA1, #8eb4f6);
+  transition: box-shadow 0.3s ease-in-out;
+  background-size: 200% 200%;
+  animation: gradientNavbarAnimation 5s ease infinite;
+}
+
+@keyframes gradientNavbarAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFD700; 
+  font-weight: bold; 
+}
+.navbar:hover {
+  background: linear-gradient(90deg, #8eb4f6, #5B7AA1);
+  background-size: 200% 200%;
+  animation: gradientNavbarHoverAnimation 5s ease infinite;
+}
+
+@keyframes gradientNavbarHoverAnimation {
+  0% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.navbar-brand img {
+  width: 90px;
+  height: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
+}
 
 footer {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+  background: linear-gradient(90deg, #A33A3A, #FF5733, #E74C3C);
+  color: white;
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s ease infinite;
+  padding: 20px 0;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
+footer h5 {
+  margin-bottom: 20px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #FFD700;
 }

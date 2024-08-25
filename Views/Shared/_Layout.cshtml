@@ -7,12 +7,13 @@
     <title>@ViewData["Title"] - NombreProyecto</title>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-</head>     
+</head>
+
 <body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #5B7AA1;">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="@Url.Action("Index", "Home")">
-                <img src="~/img/jjoo-logo.png" alt="JJOO Logo" class="me-2" style="width: 50px; height: 50px;" />
+                <img src="~/img/jjoo-logo.png" alt="JJOO Logo" class="logo-dimensions me-2" />
                 JJOO
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,40 +21,42 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Historia", "Home")">Historia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Deportes", "Home")">Deportes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Paises", "Home")">Países</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("AgregarDeportista", "Home")">Agregar Deportista</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="@Url.Action("Creditos", "Home")">Créditos</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="@Url.Action("Historia", "Home")">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="@Url.Action("Deportes", "Home")">Deportes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="@Url.Action("Paises", "Home")">Países</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="@Url.Action("AgregarDeportista", "Home")">Agregar Deportista</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="@Url.Action("Creditos", "Home")">Créditos</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-5 p-5 rounded-3" style="background-color: #F2E9E4;">
+    <div class="container mt-5 p-5 rounded-3 bg-custom">
         <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="text-white text-center py-4 mt-5" style="background-color: #A33A3A;">
+    <footer class="text-white py-5 mt-5 gradient-background">
         <div class="container">
-            <p class="mb-1">© 2024 JJOO - Todos los derechos reservados</p>
-            <p class="mb-0">
-                <a href="@Url.Action("Creditos", "Home")" class="text-white text-decoration-none">Créditos</a>
-            </p>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/img/jjoo-logo.png" alt="Olympic Logo" class="footer-logo">
+                </div>
+                <div class="col-md-2">
+                    <h5 class="mb-4">Juegos Olímpicos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Paris 2024</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Resultados y medallas</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Repeticiones y resúmenes</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Todos los Juegos Olímpicos</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </footer>    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
