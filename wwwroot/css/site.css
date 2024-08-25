@@ -94,3 +94,37 @@ footer a {
 footer a:hover {
   color: #FFD700;
 }
+.banner-jjoo {
+  background: linear-gradient(90deg, #5B7AA1, #8eb4f6);
+  height: 60vh; /* Altura del banner */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-jjoo h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-jjoo p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+.banner-jjoo .btn {
+  background-color: #8eb4f6;
+  border-color: #8eb4f6;
+  transition: background-color 0.3s ease;
+}
+
+.banner-jjoo .btn:hover {
+  background-color: #5B7AA1;
+  border-color: #5B7AA1;
+}
