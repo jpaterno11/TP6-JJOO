@@ -96,7 +96,8 @@ footer a:hover {
 }
 .banner-jjoo {
   background: linear-gradient(90deg, #5B7AA1, #8eb4f6);
-  height: 60vh; /* Altura del banner */
+  height: 60vh;
+  border-radius: 10px;
   background-size: cover;
   background-position: center;
   text-align: center;
