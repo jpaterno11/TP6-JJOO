@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Lista de Paises</h2>
+    <div class="row">
+        @foreach (var pais in BD.ListarPaises())
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="@(pais.Bandera)" class="card-img-top" alt="Imagen de @(pais.Nombre)" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@pais.Nombre</h5>
+                    </div>
+                    <form action="@Url.Action("VerDetallePais", "Home")" method="post">
+                    <div class="card-footer">
+                        <input type="hidden" name="idPais" id="idPais" value= @pais.IdPais>
+                        <button type="submit" class="btn btn-primary btn-block btn-submit">Ver Detalles</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>

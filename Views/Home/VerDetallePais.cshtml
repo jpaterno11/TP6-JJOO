@@ -1,0 +1,24 @@
+<div class="container py-5">
+    
+    <div class="bg-white rounded shadow-sm p-4 mb-5">
+        <h1 class="text-dark">@ViewBag.DetallePais.Nombre</h1>
+    </div>
+
+    <h2 class="text-dark mb-4">Deportistas en @ViewBag.DetallePais.Nombre</h2>
+
+    <div class="row">
+        @foreach (var pais in ViewBag.ListaDeportista)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="@pais.Bandera" class="card-img-top rounded-top" alt="@pais.Nombre">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">@pais.Nombre</h5>
+                        <p class="card-text text-muted">Fecha de Nacimiento: @pais.FechaFundacion.ToShortDateString()</p>
+                        <a href="@Url.Action("VerDetallepais", "Home", new { idpais = pais.IdPais })" class="btn btn-primary">Ver Detalle</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

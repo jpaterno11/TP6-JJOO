@@ -27,22 +27,22 @@ public class HomeController : Controller
         ViewBag.Paises = BD.ListarPaises(); 
         return View();
     }
-     public IActionResult VerDetalleDeporte(int idDeportista)
+     public IActionResult VerDetalleDeporte(int idDeporte)
     {
-        ViewBag.DatosDeporte = BD.VerInfoDeporte(idDeportista);
-        ViewBag.DatosDeportista = BD.ListarDeportistasPorDeporte(idDeportista);
-        return View("DetalleDeporte");
+        ViewBag.DatosDeporte = BD.VerInfoDeporte(idDeporte);
+        ViewBag.DatosDeportista = BD.ListarDeportistasPorDeporte(idDeporte);
+        return View("VerDetalleDeporte");
     }
     public IActionResult VerDetallePais(int idPais)
     {
         ViewBag.DetallePais = BD.VerInfoPais(idPais);
         ViewBag.ListaDeportistas = BD.ListarDeportistasPorPais(idPais);
-        return View("DetallePais");
+        return View("VerDetallePais");
     }
     public IActionResult VerDetalleDeportista(int idDeportista)
     {
         ViewBag.Datos = BD.VerInfoDeportista(idDeportista);
-        return View("DetalleDeportista");
+        return View("VerDetalleDeportista");
     }
     public IActionResult AgregarDeportista()
     {
@@ -50,15 +50,16 @@ public class HomeController : Controller
         ViewBag.ListadoDeportes = BD.ListarDeportes();
         return View();
     }
-    [HttpPost] IActionResult GuardarDeportista(Deportista dep)
+    [HttpPost]
+    public IActionResult GuardarDeportista(Deportista dep)
     {
         BD.AgregarDeportista(dep);
-        return View("Index");
+        return RedirectToAction("Index");
     }
     public IActionResult EliminarDeportista(int idCandidato)
     {
         BD.EliminarDeportista(idCandidato);
-        return View("Index");
+        return RedirectToAction("Index");
     }
     public IActionResult Creditos()
     {

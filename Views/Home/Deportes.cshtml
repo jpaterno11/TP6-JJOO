@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Lista de Deportes</h2>
+    <div class="row">
+        @foreach (var deporte in BD.ListarDeportes())
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <img src="@(deporte.Foto)" class="card-img-top" alt="Imagen de @(deporte.Nombre)" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@deporte.Nombre</h5>
+                    </div>
+                    <form action="@Url.Action("VerDetalleDeporte", "Home")" method="post">
+                    <div class="card-footer">
+                        <input type="hidden" name="idDeporte" id="idDeporte" value= @deporte.IdDeporte>
+                        <button type="submit" class="btn btn-primary btn-block btn-submit">Ver Detalles</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>
