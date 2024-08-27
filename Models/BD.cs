@@ -8,7 +8,7 @@ public class BD
     private static List<Deportista> _listaDeportistaxDeporte;
     private static List<Deportista> _listaDeportistaxPais;
 
-    private static string _connectionString = @"Server=localhost5088; DataBase=basededatosJJOO;Trusted_Connection=True;";
+    private static string _connectionString = @"Server=DESKTOP-U8690DJ; DataBase=JJOO ;Trusted_Connection=True;";
     public static void AgregarDeportista(Deportista dep)
     {
         string query = "INSERT INTO Deportistas (Apellido, Nombre, FechaNacimiento, Foto, IdPais, IdDeporte) VALUES (@Apellido, @Nombre, @FechaNacimiento, @Foto, @IdPais, @IdDeporte)";
