@@ -35,8 +35,8 @@ public class HomeController : Controller
     }
     public IActionResult VerDetallePais(int idPais)
     {
-        ViewBag.DetallePais = BD.VerInfoPais(idPais);
-        ViewBag.ListaDeportistas = BD.ListarDeportistasPorPais(idPais);
+        ViewBag.DatosPais = BD.VerInfoPais(idPais);
+        ViewBag.DatosDeportista = BD.ListarDeportistasPorPais(idPais);
         return View("VerDetallePais");
     }
     public IActionResult VerDetalleDeportista(int idDeportista)
@@ -62,6 +62,10 @@ public class HomeController : Controller
         return RedirectToAction("Index");
     }
     public IActionResult Creditos()
+    {
+        return View();
+    }
+    public IActionResult Historia()
     {
         return View();
     }

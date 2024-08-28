@@ -1,0 +1,31 @@
+@{
+    ViewBag.Title = "Detalles Deportista";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/detallesDeportista.css" asp-append-version="true" />
+</head>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <img src="@ViewBag.Datos.Foto" class="img-fluid rounded-circle mb-3" alt="Foto del deportista">
+            <h3>@ViewBag.Datos.Nombre @ViewBag.Datos.Apellido</h3>
+            <p>Fecha de Nacimiento: @ViewBag.Datos.FechaNacimiento.ToString("dd/MM/yyyy")</p>
+        </div>
+        <div class="col-md-8">
+            <h4>Información del Deportista</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>Nombre: </strong>@ViewBag.Datos.Nombre</li>
+                <li class="list-group-item"><strong>Apellido: </strong>@ViewBag.Datos.Apellido</li>
+                <li class="list-group-item"><strong>Deporte: </strong>
+                    <a href="@Url.Action("VerDetalleDeporte", "Home", new { idDeporte = ViewBag.Datos.IdDeporte })">@BD.VerInfoDeporte(ViewBag.Datos.IdDeporte).Nombre</a>
+                </li>
+                <li class="list-group-item"><strong>País: </strong>
+                    <a href="@Url.Action("VerDetallePais", "Home", new { idPais = ViewBag.Datos.IdPais })">@BD.VerInfoPais(ViewBag.Datos.IdPais).Nombre</a>
+                </li>
+            </ul>
+            <a href="/Home/Deportes" class="btn btn-primary mt-3">Ver Otros Deportes</a>
+            <a href="/Home/Paises" class="btn btn-secondary mt-3">Ver Otros Países</a>
+        </div>
+    </div>
+</div>

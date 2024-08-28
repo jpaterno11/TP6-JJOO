@@ -1,18 +1,24 @@
+@{
+    ViewBag.Title = "Ver Detalle de Deportes";
+}
 
+<head>
+    <link rel="stylesheet" href="~/css/verDetalles.css" asp-append-version="true" />
+</head>
 <div class="container py-5">
     
     <div class="bg-white rounded shadow-sm p-4 mb-5">
         <h1 class="text-dark">@ViewBag.DatosDeporte.Nombre</h1>
     </div>
 
-    <h2 class="text-dark mb-4">Deportistas en @ViewBag.DatosDeporte.Nombre</h2>
+    <h2 class="text-dark mb-4">Deportistas de @ViewBag.DatosDeporte.Nombre</h2>
 
     <div class="row">
         @foreach (var deportista in ViewBag.DatosDeportista)
         {
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="@deportista.Foto" class="card-img-top rounded-top" alt="@deportista.Nombre @deportista.Apellido">
+                    <img src="@deportista.Foto" class="card-img-top rounded-top" height="250" width="120" alt="@deportista.Nombre @deportista.Apellido">
                     <div class="card-body">
                         <h5 class="card-title text-dark">@deportista.Nombre @deportista.Apellido</h5>
                         <p class="card-text text-muted">Fecha de Nacimiento: @deportista.FechaNacimiento.ToShortDateString()</p>
