@@ -25,7 +25,8 @@
                 </li>
             </ul>
             <a href="/Home/Deportes" class="btn btn-primary mt-3">Ver Otros Deportes</a>
-            <a href="/Home/Paises" class="btn btn-secondary mt-3">Ver Otros Países</a>
+            <a href="/Home/Paises" class="btn btn-primary mt-3">Ver Otros Países</a>
+            <a href="@Url.Action("EliminarDeportista", "Home", new { idCandidato = ViewBag.Datos.IdDeportista })" class="btn btn-secondary mt-3">Eliminar Deportista</a>
         </div>
     </div>
 </div>
